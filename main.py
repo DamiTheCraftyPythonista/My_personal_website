@@ -5,12 +5,9 @@ from flask_bootstrap import Bootstrap5
 from smtplib import SMTP
 from twilio.rest import Client
 import os
-# from dotenv import load_dotenv
 from forms import ContactForm
 
 
-# dotenv_path = os.path.join("C://Users//Damian//PycharmProjects//.env.txt")
-# load_dotenv(dotenv_path)
 EMAIL = os.getenv('EMAIL')
 EMAIL_PASSWORD = os.getenv('EMAIL_PASSWORD')
 TWILIO_NUMBER = os.getenv('TWILIO_NUMBER')
@@ -18,9 +15,12 @@ VERIFIED_NUMBER = os.getenv('VERIFIED_NUMBER')
 TWILIO_SID = os.getenv('TWILIO_SID')
 TWILIO_AUTH_TOKEN = os.getenv('TWILIO_AUTH_TOKEN')
 
+
 app = Flask(__name__)
 bootstrap = Bootstrap5(app)
-app.config['SECRET_KEY'] = os.getenv('WTFORMS_SECRET_KEY')
+SECRET_KEY = os.environ.get('WTFORMS_SECRET_KEY')
+app.config['SECRET_KEY'] = SECRET_KEY
+
 csrf = CSRFProtect(app)
 smtp = SMTP()
 # ckeditor = CKEditor(app)
