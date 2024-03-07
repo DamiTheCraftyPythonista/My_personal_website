@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Miniport by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="#top">Home</a></li>
+					<li><a href="#about_me">About me</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+
+		<!-- Home -->
+			<article id="top" class="wrapper style1">
+				<div class="container">
+					<div class="row">
+						<div class="col-4 col-5-large col-12-medium">
+							<span class="image fit"><img src="static/images/portrét_1.jpg"
+														 alt="Image of Damian, the website owner" /></span>
+						</div>
+						<div class="col-8 col-7-large col-12-medium">
+							<header>
+								<h1>Hi, I'm <strong>Damián</strong></h1>
+							</header>
+							<p>a software developer, welcome to my website</p>
+							<a href="#portfolio" class="button large scrolly" style="color:white; background-color: #45e8fd">
+								Let me show you my work</a>
+						</div>
+					</div>
+				</div>
+			</article>
+
+		<!-- About me-->
+			<article id="about_me" class="wrapper style4">
+				<div class="container medium">
+					<header>
+						<h2>Who am I?</h2>
+						<br />
+						<p>A Czech law student, amateur footballer and perpetually curious mind, which recently
+							got enchanted by the charms of programming and particularly Python, which is my strongest
+							language and main area of interest as I consider it the future of programming.
+						</p>
+						<br />
+						<p>My biggest dream is to become a part of some really cool project which is going to
+						make the world a better place to live in for all of us :-) If you believe you run one and could use some talent please
+						don't hesitate to hit me up, I'll be more than happy to help with whatever is needed.</p>
+						<br />
+						<p>You can check some of my work <a href="#portfolio" class="about-link">here</a> Any feedback or
+							insights to it are welcome dearly! You can contact me through this <a href="#contact" class="about-link">
+								form</a> or simply hit me up on <a href="#social" class="about-link">social media</a>.
+						</p>
+					</header>
+				</div>
+			</article>
+
+		<!-- Portfolio -->
+			<article id="portfolio" class="wrapper style3">
+				<div class="container">
+					<header>
+						<h2>Here are some of my projects.</h2>
+<!--						<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>-->
+					</header>
+					<div class="row">
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="https://blog-website-project-cawz.onrender.com/"  target="_blank" class="image featured"><img src="static/images/pic01.jpg" alt="" /></a>
+								<h3><a href="https://blog-website-project-cawz.onrender.com/"  target="_blank">Blog with a user db</a></h3>
+								<p>Project from a course I took. Shows my ability in both Python (Flask and SQLAlchemy) and Web Development</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured"><img src="static/images/pic02.jpg" alt="" /></a>
+								<h3><a href="#">Coming soon</a></h3>
+								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer vulputate sem a consequat.</p>
+							</article>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<article class="box style2">
+								<a href="#" class="image featured"><img src="static/images/pic03.jpg" alt="" /></a>
+								<h3><a href="#">Coming soon</a></h3>
+								<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.</p>
+							</article>
+						</div>
+					</div>
+					<footer>
+						<p>Opinion? Feedback? Idea?</p>
+						<a href="#contact" class="button large scrolly">
+							Get in touch with me</a>
+					</footer>
+				</div>
+			</article>
+
+		<!-- Contact -->
+			<article id="contact" class="wrapper style4">
+				<div class="container medium">
+					<header>
+						<h2>Let's build something great together!</h2>
+						<p>Python, Web Development, the bigger the challenge the better.</p>
+					</header>
+					<div class="row">
+
+						<div class="col-12">
+							<form method="post" action="{{ url_for('home') }}">
+								<div class="row">
+									{{ form.csrf_token }}
+									<div class="col-6 col-12-small">
+        								{{ form.name(id="name", placeholder="Name") }}
+									</div>
+									<div class="col-6 col-12-small">
+										{{ form.email(id="email", placeholder="Email") }}
+									</div>
+									<div class="col-12">
+										{{ form.subject(id="subject", placeholder="Subject") }}
+									</div>
+									<div class="col-12">
+										{{ form.message(class_="message", id="message", placeholder="Message") }}
+									</div>
+									<div class="col-12">
+										<ul class="actions">
+											{{ form.submit(class="submit-field") }}
+											<li><input type="reset" value="Clear Form" class="alt" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</div>
+
+						<div class="col-12">
+							<hr />
+							<ul class="social" id="social">
+								<li><a href="https://www.facebook.com/damian.nikodym" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.linkedin.com/in/dami%C3%A1n-nikod%C3%BDm-03aa26237/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+								<li><a href="https://github.com/damianosbananos" class="icon brands fa-github"><span class="label">Github</span></a>
+<!--								<li><p>tel: +420 720 937 221</p></li>-->
+<!--								<li><p>email: damian.nikodym@gmail.com</p></li>-->
+							</ul>
+<!--							<ul class="phone-email">-->
+							</ul>
+							<hr />
+						</div>
+
+					</div>
+					<footer>
+						<ul id="copyright">
+							<li>&copy; Damián Nikodým, 2024. All rights reserved.</li><li>Design: Based on <a href="http://html5up.net">HTML5 UP</a>
+						, modified by Damián Nikodým</li>
+						</ul>
+					</footer>
+				</div>
+			</article>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>
